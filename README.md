@@ -20,6 +20,11 @@ The project is work-in-progress and still full of bugs. Playing with the API at 
 
 # Reverseengineering
 
+For this part I used the mitmproxy in Docker.
+
+[https://den.dev/blog/intercepting-iphone-traffic-on-a-mac-a-how-to-guide/](https://den.dev/blog/intercepting-iphone-traffic-on-a-mac-a-how-to-guide/)
+
+
 So here is the traffic step by step:
 
 First it refreshes the token from ```https://api.airthin.gs/v1/refresh```
@@ -50,7 +55,6 @@ Now it posts the new samples to ```https://api.airthin.gs/v1/me/devices/29500379
 ```{ "installationId": "61175029-3349-4BA7-953D-A5958Axxxxxx", "macAddress": "D8:71:4D:xx:xx:xx", "macAddressWrittenDate": 1641882971, "samples": [ { "accel": 0, "accelEvent": false, "appState": "active", "appVersion": "3.8.7(426)", "battCharge": null, "battVoltage": 3063, "bleConnected": null, "co2": null, "cycle": 1, "debug": null, "errorFlag": null, "handWaves": 0, "humidity": 41.5, "id": 13210183611279476044, "light": 0, "pressure": null, "radonInstant": null, "radonLongTermAvg": null, "radonShortTermAvg": null, "record": 1356, "relayDevice": "iPhone", "relayDeviceOS": "iOS,15.3", "sampleRecorded": "2022-01-10T05:48:00", "sampleTransferred": "2022-01-11T06:36:12", "submitted": "2022-01-11T06:36:12", "temp": 20.200000762939453, "voc": null, "waveCcFwVersion": "1.5.3", "waveMspFwVersion": "1.6.0", "waveSub1FwVersion": "2.0.2" }, { "accel": 0, "accelEvent": false, "appState": "active", "appVersion": "3.8.7(426)", "battCharge": null, "battVoltage": 3063, "bleConnected": null, "co2": null, "cycle": 1, "debug": null, "errorFlag": null, "handWaves": 0, "humidity": 41.5, "id": 13210183611279476045, "light": 3, "pressure": null, "radonInstant": null, "radonLongTermAvg": null, "radonShortTermAvg": null, "record": 1357, "relayDevice": "iPhone", "relayDeviceOS": "iOS,15.3", "sampleRecorded": "2022-01-10T05:53:00", "sampleTransferred": "2022-01-11T06:36:12", "submitted": "2022-01-11T06:36:12", "temp": 20.219999313354492, "voc": null, "waveCcFwVersion": "1.5.3", "waveMspFwVersion": "1.6.0", "waveSub1FwVersion": "2.0.2" } ], "submitted": "2022-01-11T06:36:12" }```
 
 ```id``` is iterating +1 for every new record. The radon level is only transmitted once in a hour.
-
 
 
 # Release notes
