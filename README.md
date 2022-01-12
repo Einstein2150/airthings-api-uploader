@@ -3,10 +3,6 @@
 Airthings Wave is a smart Radon detector, including sensors for temperature and humidity measurements. You need the official app to upload date to the cloud service. The goal of this project is to get the sensor data by a bluetooth device (i.e. a raspberry pi) which pushes the data directly into the cloud.
 
 
-This is a project to provide users a starting point (```read_wave2.py```) to read current sensor
-values from the 2nd generation [Airthings Wave](https://airthings.com/wave/) devices using a Raspberry Pi 3
-Model B over Bluetooth Low Energy (BLE) and post it to a webservice in JSON-Format
-
 **Warning:
 The project is work-in-progress and still full of bugs. Playing with the API at the point where you POST new data might break your app-sync. In this case an unpairing and repairing of the device will fix it but all cloud data will be lost!**
 
